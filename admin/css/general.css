@@ -1,0 +1,203 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* --------------------- RESET ---------------------*/
+@charset "utf-8"; html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {margin:0; padding:0; border:0; outline:0; vertical-align:baseline; background:transparent;}body {line-height:normal;}article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary {display:block;}nav ul {list-style:none;}blockquote, q {quotes:none;}a {margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent;}a {margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent;}blockquote:before, blockquote:after, q:before, q:after {content:''; content:none;}ins {background-color:#ff9; color:#000; text-decoration:none;}mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold;}del {text-decoration: line-through;}abbr[title], dfn[title] {border-bottom:1px dotted #000; cursor:help;}table {border-collapse:collapse; border-spacing:0;}hr {display:block; height:1px; border:0; border-top:1px solid #cccccc; margin:1em 0; padding:0;}input, select {vertical-align:middle;}
+
+/* ------------------------------ Images --------------------------- */
+img{max-width: 100%; height: auto;}
+img.pull-right{margin: 12px 0px 0px 18px; }
+img.pull-left{margin: 12px 18px 0px 0px; }
+
+/* ------------------------------- Grid ----------------------------------- */
+.row{width: 96%; max-width:1008px; margin:0 auto; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
+.narrow .row{max-width:976px;}
+.ie .row {width:1008px;}
+.row .row {width:auto; max-width:100%}
+.col{position:relative; padding:0 18px; float:left;}
+.row:before, .row:after{content: " ";display:table;}
+.row:after{clear:both;}
+.row{*zoom:1;}
+.row.collapsed .col, col.collapsed{padding: 0;}
+.col .col:first-child { padding-left: 0; }
+.col .col:last-child { padding-right: 0; }
+.ie .row .row .last { padding-right: 0; }
+.row .one-twelfth,     .row .g-1     { width: 8.33333%; }
+.row .one-sixth,       .row .g-2     { width: 16.66667%; }
+.row .one-fourth,      .row .g-3     { width: 25%; }
+.row .one-third,       .row .g-4     { width: 33.33333%; }
+.row .five-twelfths,   .row .g-5     { width: 41.66667%; }
+.row .half,            .row .g-6     { width: 50%; }
+.row .seven-twelfths,  .row .g-7     { width: 58.33333%; }
+.row .two-thirds,      .row .g-8     { width: 66.66667%; }
+.row .three-fourths,   .row .g-9     { width: 75%; }
+.row .five-sixths,     .row .g-10    { width: 83.33333%; }
+.row .eleven-twelfths, .row .g-11    { width: 91.66667%; }
+.row .full,            .row .g-12    { width: 100%; }
+
+/* Offsets */
+.row .offset-1    { margin-left: 8.33333%; }
+.row .offset-2    { margin-left: 16.66667%; }
+.row .offset-3    { margin-left: 25%; }
+.row .offset-4    { margin-left: 33.33333%; }
+.row .offset-5    { margin-left: 41.66667%; }
+.row .offset-6    { margin-left: 50%; }
+.row .offset-7    { margin-left: 58.33333%; }
+.row .offset-8    { margin-left: 66.66667%; }
+.row .offset-9    { margin-left: 75%; }
+.row .offset-10   { margin-left: 83.33333%; }
+.row .offset-11   { margin-left: 91.66667%; }
+
+/* ------------------------ Basic body ------------------------------- */
+*, *:before, *:after{-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+html{overflow-y:scroll; overflow-x:hidden;}
+html, body{height:100%;}
+body{font:0.8rem "Trebuchet MS", Arial, Helvetica, sans-serif; color:#555; -webkit-font-smoothing:antialiased; -webkit-text-size-adjust:100%;}
+
+/*  2. Typography Vertical rhythm with leading derived from 6 ------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6{color:#444;}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+h1 { font-size:3rem; line-height:2.8rem; margin:20px 0 10px 0;}
+h2 { font-size:2.2rem; line-height:2.3rem; margin:15px 0 15px 0;}
+h3 { font-size:1.5rem; line-height:1.5rem; margin:10px 0 10px 0;}
+h4 { font-size:1.3rem; line-height:1.3rem; margin-bottom:8px; }
+h5 { font-size: 1rem; line-height:1rem; }
+h6 { font-size: 0.8rem; line-height:0.9rem;}
+.subheader { }
+p{margin: 0 0 1rem 0; line-height:1.4rem; font-size:1rem;}
+p img { margin: 0; }
+.hide{display:none;}
+
+/* -------------------------------------------- Abbreviations ------------------------------------------------ */
+abbr{font-family:Arial, Helvetica, sans-serif; font-variant: small-caps; text-transform: lowercase; letter-spacing: .5px; color: gray;}
+abbr:hover{cursor:pointer;}
+hr { border: solid #E0E0E0; border-width: 1px 0 0; clear: both; margin: 20px 0 30px 0; height: 0; }
+
+/*  3. Links  ------------------------------------------------------- */
+a, a:visited{text-decoration:none; outline:0; -webkit-transition:all .3s ease-in-out; -moz-transition:all .3s ease-in-out; -o-transition:all .3s ease-in-out; transition:all .3s ease-in-out; color:#1d71b8;}
+p a, p a:visited{line-height: inherit; color:#1d71b8;}
+ a img{outline:0; -webkit-transition:all .3s ease-in-out; -moz-transition:all .3s ease-in-out; -o-transition:all .3s ease-in-out; transition:all .3s ease-in-out; opacity:1;}
+a img:hover{opacity:0.7;}
+
+/* smaller screens
+--------------------------------------------------------------- */
+@media only screen and (max-width: 800px) {
+
+   /*.col { padding: 0 15px; } */
+
+}
+
+/* mobile wide
+--------------------------------------------------------------- */
+@media only screen and (max-width: 767px) {.row {margin: 0 auto; padding: 0;} .col {width: 100% !important; float: none; margin-left: 0; margin-right: 0; padding: 0 20px;} .col .row { width: 100%; } .col .row .col { padding: 0; }
+   .row .offset-1    { margin-left: 0%; }
+   .row .offset-2    { margin-left: 0%; }
+   .row .offset-3    { margin-left: 0%; }
+   .row .offset-4    { margin-left: 0%; }
+   .row .offset-5    { margin-left: 0%; }
+   .row .offset-6    { margin-left: 0%; }
+   .row .offset-7    { margin-left: 0%; }
+   .row .offset-8    { margin-left: 0%; }
+   .row .offset-9    { margin-left: 0%; }
+   .row .offset-10   { margin-left: 0%; }
+   .row .offset-11   { margin-left: 0%; }
+}
+
+/* mobile narrow
+--------------------------------------------------------------- */
+@media only screen and (max-width: 460px) {
+
+   .row { width: 100%; }
+
+}
+
+/* larger screens
+--------------------------------------------------------------- */
+@media screen and (min-width: 1200px) {
+
+   .wide .row { max-width: 1180px; }
+   .wide .col { padding: 0 20px; }
+
+}
+
+
+/* ------------------------------------------------------------------ */
+/* e. Others
+/* ------------------------------------------------------------------ */
+
+/*  1. Clearing
+    (http://nicolasgallagher.com/micro-clearfix-hack/
+--------------------------------------------------------------------- */
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.cf { *zoom: 1; }
+
+/*  2. Misc -------------------------------------------------------- */
+
+.remove-bottom { margin-bottom: 0 !important; }
+.half-bottom { margin-bottom: 12px !important; }
+.add-bottom { margin-bottom: 24px !important; }
+.no-border { border: none; }
+
+.align-center { text-align: center; }
+.align-left   { text-align: left; }
+.align-right  { text-align: right; }
+.pull-left    { float: left; }
+.pull-right   { float: right; }
+
+/*---------------------- FORMS-----------------------*/
+#login{position:relative; top:30px; left:0px;}
+@media screen and (-webkit-min-device-pixel-ratio:0) {select {padding-right:18px}}
+#suscrip form{height:260px;}
+#login form{height:300px;}
+#infopago{height:300px; width:500px; display:block;}
+form{margin:0 auto;}
+form fieldset input[type=text], form fieldset input[type=email], form fieldset input[type=url], form fieldset input[type=password], form fieldset input[type=number], textarea, select { border:none;} 
+input[type=text]:focus, textarea:focus, input[type=email], select:focus{outline:none; border-bottom:1px solid #333;}
+::-webkit-input-placeholder{color:666;}
+:-moz-placeholder{color:666;}
+::-moz-placeholder{color:666;}
+:-ms-input-placeholder{color:666;}
+form fieldset input.invalid {border-bottom:1px solid #f00;} 
+.boton{display:block; padding:5px 8px; font-size:1em; color:#FFF; border:none; background-color:#333; -webkit-user-select:none; -moz-user-select:none; cursor:pointer; clear:both; width:200px;} 
+.boton:hover {background:#c02026;} 
+.inp, .textar, .selecto{height:30px; margin-bottom:10px; border-bottom:1px solid #E66D76 !important; padding:5px 0px; width:100%; background:none; font-size:1.1rem; color:#333; font-family: monospace!important;}
+#fform .inp, #fform .textar, #fform .selecto{height:30px; margin-bottom:6px; border-bottom:1px solid #666 !important; padding:5px 3px; width:100%; background:none; font-size:1rem; color:#333;
+#nlf{display:block;}
+.inpnl{height:40px; padding:5px; width:310px; float:left; display:inline-block; color:#333; margin-left:10px; background:#FFF; border:none !important;}
+.placa{ text-transform:uppercase !important; background:#000 !important; color:#FFF !important; padding:5px;}
+.dates:focus, .dates:active{border-bottom:3px #0F0 solid !important;}
+#btnnl{height:40px; color:#E66D76; background:#666; border:none;
+  -moz-transition-property: background-color, color;
+  -moz-transition-duration: 0.5s;
+  -moz-transition-timing-function: ease-out;
+  -webkit-transition-property: background-color, color;
+  -webkit-transition-duration: 0.5s;
+  -o-transition-property: background-color, color;
+  -o-transition-duration: 0.5s;}
+#btnnl:hover{background:#4D4D4D;}
+
+
+/*---------------------- Customized alerts-----------------------*/
+#acuse{border:10px #c02026 solid;}
+#acuse td, #acuse tr{padding:20px;}
+#acuse .logoven{padding:10px 10px 10px 4px; width:180px;}
+.logok{padding:10px;}
+.formbg{ background-color:#FFF; padding:15px;}
+#dialogoverlay{display:none; opacity:.8 ;position:fixed; top:0px; left:0px; background:#FFF; width:100%; z-index:10;}
+#dialogbox{display:none; position:fixed; background:#000; border-radius:7px; width:550px; z-index:10;}
+#dialogbox > div{background:#FFF; margin:8px;}
+#dialogbox > div > #dialogboxhead{ background: #666; font-size:1.8rem; padding:10px; color:#CCC; }
+#dialogbox > div > #dialogboxbody{ background:#333; padding:20px; color:#FFF; }
+#dialogbox > div > #dialogboxfoot{ background: #666; padding:10px; text-align:right; }
+
